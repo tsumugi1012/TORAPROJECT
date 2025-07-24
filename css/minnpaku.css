@@ -1,0 +1,806 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+main {
+  margin-bottom: 30px;
+  color: #30344D;
+  margin-top: 90px; 
+}
+/* 紹介写真 */
+main section {
+  margin-bottom: 30px;
+}
+main section h1 {
+  color: #30344D;
+  font-size: 4.5vw; 
+  margin-top: 5.5vh;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+.image-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 50vw; 
+  max-height: 720px;
+  overflow: hidden; 
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 3s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.image-wrapper .text-title {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+  font-weight: bold;
+  font-size: 4vw;
+  color: #FFA500;
+  text-align: left;
+  text-shadow: 0.2vw 0.2vw 0.4vw #fff;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.image-wrapper .text-sub {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 2vw;
+  color: #C58B4B;
+  text-align: center;
+  white-space: nowrap; 
+  font-family: 'Noto Serif JP', serif;
+}
+
+
+.image-wrapper .contact-button {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: #C58B4B;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em;
+  border-radius: 1em;
+  font-size: 1.5vw;
+}
+
+.image-wrapper .contact-button:hover {
+  background-color: #30344D;
+}
+
+
+/* 相談事例 */
+.experience-section {
+  background-color: #C58B4B;
+  margin-bottom: 30px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.experience-section h2 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+.experience-section .circles {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.experience-section .circle {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.experience-section .circle p {
+  font-size: 18px;
+  color: #111835;
+  line-height: 1.4;
+}
+
+.experience-section .bottom-text {
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+}
+
+.highlight {
+  color: #111835;
+}
+
+
+/* 特徴 */
+.reason-section {
+  margin-bottom: 30px;
+}
+
+.reason-container {
+  border: 10px solid #30344D;
+  width: 80%; 
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.reason-title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #C58B4B;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 30px; 
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+.reason-item {
+  margin-bottom: 20px;
+}
+
+.reason-subtitle {
+  font-weight: 500;
+  font-size: 36px;
+  font-weight: bold;
+  color: #30344D;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.reason-text {
+  font-size: 24px;
+  color: #30344D;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+/* 料金 */
+.price-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.price-title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #30344D;
+  margin-bottom: 40px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.plan-section {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #111835;
+}
+
+.plan-title {
+  font-size: 38px;
+  font-weight: 600;
+  color: #C58B4B;
+  padding: 40px;
+  margin-bottom: 30px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.plan-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.plan-content.left-image .plan-image {
+  order: 0;
+}
+
+.plan-content.left-image .plan-text {
+  order: 1;
+}
+
+.plan-content.right-image .plan-image {
+  order: 1;
+}
+
+.plan-content.right-image .plan-text {
+  order: 0;
+}
+
+.plan-image {
+  width: 40%;
+  border: 8px solid #C58B4B;
+  margin: 0 20px;
+}
+
+.plan-image img {
+  width: 100%;
+  display: block;
+}
+
+.plan-text {
+  width: 50%;
+  text-align: center;
+  font-size: 26px;
+}
+
+.plan-price {
+  font-size: 42px;
+  font-weight: bold;
+  color: #C58B4B;
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.plan-note {
+  font-size: 18px;
+  color: #111835;
+  margin-bottom: 20px;
+}
+
+.underline {
+  background: linear-gradient(transparent 60%, #E9AB66 60%);
+}
+
+.plan-contact {
+  font-size: 18px;
+  color: #111835;
+  margin-top: 20px;
+}
+
+
+/* サービスの流れ */
+.flow-section {
+  margin-bottom: 30px;
+}
+
+.flow-container {
+  border: 8px solid #30344D;
+  padding: 50px;
+  text-align: center;
+}
+
+.flow-title {
+  color: #C58B4B;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.flow-step {
+  text-align: left;
+  margin: 60px 0;
+}
+
+.flow-step h3 {
+  color: #C58B4B;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.flow-step p {
+  color: #111835;
+  font-size: 28px;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+.flow-contact {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .flow-step h3 {
+    font-size: 28px;
+  }
+  .flow-step p {
+    font-size: 20px;
+  }
+  .flow-title {
+    font-size: 40px;
+  }
+}
+
+
+
+/* お客様の声 */
+.customer-voice {
+  background-color: #EEAF6A;
+  margin-bottom: 30px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.voice-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2em 0;
+  text-align: center;
+  color: white;
+}
+
+.voice-container h1 {
+
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1em;
+  word-break: break-word;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice-box {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  border: 2px solid #111835;
+  background-color: #fff;
+  padding: 1em;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.voice-box p {
+  font-size: 1.5em;
+  color: #111835;
+  line-height: 1.6;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+.contact-section {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111835;
+}
+
+.contact-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.contact-section .contact-message {
+  font-size: 24px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #C58B4B;
+  color: #fff;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+
+.contact-button:hover {
+  background-color: #111835;
+}
+
+
+
+
+
+/* レスポンシブ対応 */
+
+@media (max-width: 430px) {
+
+  main {
+    margin-top: 100px; 
+  }
+
+  main section h1 {
+    font-size: 6vw;
+  }
+
+  .image-wrapper {
+    width: 95%;
+    height: auto;
+  }
+
+  .image-wrapper img {
+    height: auto;
+  }
+
+  .image-wrapper .text-title {
+    font-size: 6vw;
+    top: 50%;
+  }
+
+  .image-wrapper .text-sub {
+    font-size: 3.5vw;
+    top: 70%;
+  }
+
+  .image-wrapper .contact-button {
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .experience-section h2 {
+    font-size: 6vw;
+  }
+
+  .experience-section .circles {
+    gap: 20px;
+  }
+
+  .experience-section .circle {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+  }
+
+  .experience-section .circle p {
+    font-size: 14px;
+  }
+
+  .experience-section .bottom-text {
+    max-width: 100%;
+    font-size: 5vw;
+    padding: 10px;
+  }
+
+  .reason-title {
+    font-size: 20px;
+    padding: 4px;
+  }
+
+  .reason-subtitle {
+    font-size: 14px;
+  }
+
+  .reason-text{
+  text-align: left;
+  font-size: 14px;
+  }
+
+  .price-title {
+    font-size: 26px;
+  }
+
+  .plan-title{
+    font-size: 26px;
+  }
+
+  .plan-content {
+    flex-direction: column !important;
+  }
+
+  .plan-content .plan-image {
+    order: 1 !important;
+  }
+
+  .plan-content .plan-text {
+    order: 2 !important;
+  }
+
+
+  .plan-image, .plan-text {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .plan-text {
+    font-size: 16px;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .plan-price {
+    font-size: 22px;
+    padding: 0;
+  }
+
+  .plan-note {
+    font-size: 3.5vw;
+  }
+
+  .flow-title {
+    font-size: 26px;
+  }
+
+  .flow-step h3 {
+    font-size: 18px;
+  }
+
+  .flow-step p {
+    font-size: 14px;
+    padding: 20px;
+    margin: -12px;
+    line-height: 1.6;
+  }
+
+
+  .customer-voice {
+    max-width: 95%;
+  }
+
+  .voice-container h1 {
+    font-size: 26px;
+  }
+
+  .voice-box {
+    width: 95%;
+  }
+
+  .voice-box p {
+    font-size: 14px;
+  }
+
+
+  .contact-section h1 {
+    font-size: 26px;
+  }
+
+  .contact-section .contact-message {
+    font-size: 14px;
+  }
+
+  .contact-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  }
+
+
+  
+  .flow-container .contact-button{
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: -20px;
+  }
+
+  
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+/* 初期状態 */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* スライドイン（下から上） */
+.animate-on-scroll.slide-in {
+  transform: translateY(50px);
+}
+.animate-on-scroll.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 上から落ちる */
+.animate-on-scroll.drop-in {
+  transform: translateY(-50px);
+}
+.animate-on-scroll.drop-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.animate-on-scroll.slide-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll.slide-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media (min-width: 768px) and (max-width: 850px) {
+  /* ボタンを統一 */
+  .contact-btn,
+  .contact-button,
+  .image-wrapper .contact-button,
+  .flow-container .contact-button {
+  font-size: 20px;
+  padding: 16px 20px;
+  }
+
+  /* 見出し・テキストの調整 */
+  main {
+    margin-top: 90px;
+  }
+
+  main section h1 {
+    font-size: 4vw;
+  }
+
+  .image-wrapper {
+    width: 85%;
+    height: 45vw;
+  }
+
+  .image-wrapper .text-title {
+    font-size: 3.5vw;
+    top: 30%;
+  }
+
+  .image-wrapper .text-sub {
+    font-size: 1.8vw;
+    bottom: 35%;
+  }
+
+  .experience-section h2 {
+    font-size: 36px;
+  }
+
+
+  .experience-section .circle p {
+    font-size: 16px;
+  }
+
+  .experience-section .bottom-text {
+    font-size: 30px;
+  }
+
+  .reason-title {
+    font-size: 40px;
+  }
+
+  .reason-subtitle {
+    font-size: 28px;
+  }
+
+  .reason-text {
+    font-size: 20px;
+  }
+
+  .price-title {
+    font-size: 36px;
+  }
+
+  .plan-title {
+    font-size: 36px;
+  }
+
+  .plan-content {
+    flex-direction: row !important;
+  }
+
+  .plan-image {
+    width: 40%;
+  }
+
+  .plan-text {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  .plan-price {
+    font-size: 30px;
+  }
+
+  .plan-note {
+    font-size: 16px;
+  }
+
+  .flow-title {
+    font-size: 36px;
+  }
+
+  .flow-step h3 {
+    font-size: 28px;
+  }
+
+  .flow-step p {
+    font-size: 20px;
+  }
+
+  .customer-voice {
+    max-width: 90%;
+  }
+
+  .voice-container h1 {
+    font-size: 36px;
+  }
+
+  .voice-box {
+    width: 90%;
+  }
+
+  .voice-box p {
+    font-size: 20px;
+  }
+
+  .contact-section h1 {
+    font-size: 36px;
+  }
+
+  .contact-section .contact-message {
+    font-size: 20px;
+  }
+}

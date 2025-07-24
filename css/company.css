@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #30344D;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  margin-top: 90px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* 企業理念 */
+.concept h1 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+.tagline {
+  background-color: #C58B4B;
+  color: #fff;
+  font-size: 32px;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* 代表挨拶 */
+.greeting-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.greeting-container img {
+  max-width: 300px;
+  width: 100%;
+  margin: 10px;
+}
+
+.greeting-container .message {
+  max-width: 600px;
+  margin: 10px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.greeting-container .representative {
+  font-size: 28px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.representative .tora {
+  color: #30344D;
+  font-weight: bold;
+}
+
+.representative .project {
+  color: #C58B4B;
+}
+
+.representative {
+  font-size: 16px;
+  text-align: left;
+  margin-left: 370px;
+}
+
+
+/* TORAPROJECTについて */
+.about-box {
+  border: 4px solid #C58B4B;
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.about-box h2 {
+  font-size: 48px;
+  margin-bottom: 20px; 
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+.tora-bold {
+  color: #30344D;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.project-bold {
+  color: #C58B4B;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.about-title {
+  color: #30344D;
+  font-size: 48px;
+}
+
+.about-box p {
+  font-size: 28px;
+  margin-top: 20px;
+  line-height: 2;
+  padding: 10px;
+  text-align: left;
+}
+
+/* 会社概要 */
+.company-info h2 {
+  font-size: 48px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background-color: #30344D;
+  display: block; /* ← 変更！ */
+  width: 100%;
+  padding: 30px;
+  font-size: 24px;
+  line-height: 2;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper table {
+  min-width: 800px;
+  width: auto;
+  border-collapse: collapse;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  white-space: nowrap;
+  border: 1px solid #C58B4B;
+  padding: 16px 8px;
+  text-align: left;
+  font-family: 'Noto Serif JP', serif;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .greeting-container {
+    flex-direction: column;
+  }
+
+  .about-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 430px) {
+  .concept h1 {
+    font-size: 32px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .greeting-container {
+    flex-direction: column;
+  }
+
+  .greeting-container img {
+    max-width: 80%;
+  }
+
+  .greeting-container .message {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .representative {
+    font-size: 16px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .about-box {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .about-box h2 {
+    font-size: 22px;
+  }
+
+  .tora-bold, .project-bold {
+    font-size: 26px;
+  }
+
+  .about-title {
+    font-size: 26px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+
+  .company-info h2 {
+    font-size: 32px;
+  }
+
+.info-box {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+/* 初期状態 */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* スライドイン（下から上） */
+.animate-on-scroll.slide-in {
+  transform: translateY(50px);
+}
+.animate-on-scroll.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 上から落ちる */
+.animate-on-scroll.drop-in {
+  transform: translateY(-50px);
+}
+.animate-on-scroll.drop-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.animate-on-scroll.slide-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll.slide-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+  .concept h1 {
+    font-size: 40px;
+  }
+
+  .tagline {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .greeting-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .greeting-container img {
+    max-width: 250px;
+  }
+
+  .greeting-container .message {
+    font-size: 20px;
+  }
+
+  .representative {
+    font-size: 18px;
+    text-align: center;
+    margin-left: -460px;
+    margin-top: 10px;
+  }
+
+  .about-box {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .about-box h2 {
+    font-size: 36px;
+  }
+
+  .tora-bold, .project-bold {
+    font-size: 48px;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-box p {
+    font-size: 20px;
+  }
+
+  .company-info h2 {
+    font-size: 36px;
+  }
+
+  .info-box {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    padding: 12px 6px;
+    font-size: 16px;
+  }
+}
